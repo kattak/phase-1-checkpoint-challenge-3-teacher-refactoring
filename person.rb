@@ -8,7 +8,6 @@ class DBCPerson
       @name = options.fetch(:name, "")
     end
 
-
   def offer_high_five
     "High five!"
   end

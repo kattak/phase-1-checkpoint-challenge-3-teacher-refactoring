@@ -13,6 +13,15 @@ class Teacher < DBCPerson
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works#{self.class::EMPHATIC}"
+    response += "*drops#{self.class::TYPE_BOMB}knowledge bomb* "
+    response += "... You're welcome.#{self.class::SASSY_WALK}"
+    response
+  end
+
+#should all be private methods? but then would have to change rspecs
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
@@ -31,14 +40,6 @@ class Teacher < DBCPerson
       response += "Oh, well -- thanks to this actionable, specific, and kind "
       response += "feedback, I'll do better next time."
     end
-    response
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works#{self.class::EMPHATIC}"
-    response += "*drops#{self.class::TYPE_BOMB}knowledge bomb* "
-    response += "... You're welcome.#{self.class::SASSY_WALK}"
     response
   end
 
