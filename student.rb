@@ -1,7 +1,8 @@
+require_relative 'person'
 
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+class Student < DBCPerson
+  # attr_reader :age, :phase
+  # attr_accessor :name
 
   def initialize(options = {})
     @phase = 1
@@ -21,7 +22,7 @@ class Student
     else
       response = "Oooh, phase #{num}. I hope I'm ready!"
     end
-    @phase = num
+    super
     response
   end
 

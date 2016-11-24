@@ -1,8 +1,8 @@
 require_relative 'teacher'
 
 class ApprenticeTeacher < Teacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader  :salary, :target_raise #:age,phase, 
+  #attr_accessor :name
 
   def initialize(options={})
     @age = options.fetch(:age, 0)
