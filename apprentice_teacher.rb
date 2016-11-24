@@ -1,4 +1,6 @@
-class ApprenticeTeacher
+require_relative 'teacher'
+
+class ApprenticeTeacher < Teacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -9,14 +11,14 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
+  #
+  # def set_phase(num)
+  # #  @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
