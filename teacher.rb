@@ -34,4 +34,12 @@ class Teacher < DBCPerson
     response
   end
 
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works#{self.class::EMPHATIC}"
+    response += "*drops#{self.class::TYPE_BOMB}knowledge bomb* "
+    response += "... You're welcome.#{self.class::SASSY_WALK}"
+    response
+  end
+
 end
