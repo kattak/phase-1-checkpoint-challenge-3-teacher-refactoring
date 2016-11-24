@@ -2,6 +2,7 @@ require_relative 'teacher'
 
  class SeniorTeacher < Teacher
   attr_reader :performance_rating
+  DESIRED_RATING = 90
 
   def initialize(options={})
     @target_raise = 1000
@@ -25,17 +26,17 @@ require_relative 'teacher'
   #   @salary += raise
   # end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > DESIRED_RATING
+  #     response = "Yay, I'm a great employee!"
+  #     receive_raise(@target_raise)
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
 
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
